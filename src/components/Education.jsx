@@ -17,7 +17,14 @@ export default function Education({ education, setEducation }) {
         }
 
         setEducation([...education, edu]);
-        console.log(education);
+        clearFields();
+    }
+
+    function clearFields() {
+        setSchoolName('');
+        setDegree('');
+        setStartDate(Date());
+        setEndDate(Date());
     }
 
     return (

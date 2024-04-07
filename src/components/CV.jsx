@@ -3,7 +3,8 @@ export default function CV({
     lastName,
     email,
     phone,
-    education
+    education,
+    experience
 }) {
 
     return (
@@ -14,7 +15,12 @@ export default function CV({
             <h1>{phone}</h1>
             <div>
                 {education.map(ed => {
-                    return <p>{JSON.stringify(ed)}</p>
+                    return <p key={ed.id}>{JSON.stringify(ed)}</p>
+                })}
+            </div>
+            <div>
+                {experience.map(exp => {
+                    return <p key={exp.id}>{JSON.stringify(exp)}</p>
                 })}
             </div>
         </div>
