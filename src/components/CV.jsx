@@ -1,8 +1,9 @@
-function CV({
+export default function CV({
     firstName,
     lastName,
     email,
-    phone
+    phone,
+    education
 }) {
 
     return (
@@ -11,8 +12,11 @@ function CV({
             <h1>{lastName}</h1>
             <h1>{email}</h1>
             <h1>{phone}</h1>
+            <div>
+                {education.map(ed => {
+                    return <p>{JSON.stringify(ed)}</p>
+                })}
+            </div>
         </div>
     )
 }
-
-export default CV;
